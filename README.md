@@ -1,17 +1,27 @@
+[![](https://img.shields.io/badge/razor-1.0.0-passing-green)](https://github.com/gongahkia/razor/releases/tag/1.0.0) 
+
 # `Razor`
 
 ...
 
+Tiny password manager.
+
+Made to practise the stack for my internship. 
+
 ## Stack
 
-* *Frontend*: Vue.js
-* *Backend*: PHP
-* *Database*: SQL
+* **Frontend**: Vue.js
+* **Backend**: PHP, Node *(later...)*
+* **Database**: SQL
 * ...
 
 ## Usage
 
 ...
+
+```console
+...
+```
 
 ## Architecture
 
