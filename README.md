@@ -11,7 +11,7 @@ Made to practise the stack for my internship.
 ## Stack
 
 * **Frontend**: Vue.js
-* **Backend**: PHP, Node *(later...)*
+* **Backend**: PHP, Node.js *(later...)*
 * **Database**: SQL
 * ...
 
