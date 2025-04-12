@@ -4,7 +4,7 @@
 
 Tiny password manager.
 
-Made to practise the stack for my internship. 
+Made to practise [the stack](#stack) for my internship. 
 
 ## Stack
 
