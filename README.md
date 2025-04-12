@@ -1,8 +1,6 @@
-[![](https://img.shields.io/badge/razor-1.0.0-passing-green)](https://github.com/gongahkia/razor/releases/tag/1.0.0) 
+[![](https://img.shields.io/badge/razor_1.0.0-passing-green)](https://github.com/gongahkia/razor/releases/tag/1.0.0) 
 
 # `Razor`
-
-...
 
 Tiny password manager.
 
@@ -10,14 +8,20 @@ Made to practise the stack for my internship.
 
 ## Stack
 
-* **Frontend**: Vue.js
-* **Backend**: PHP, Node.js *(later...)*
-* **Database**: SQL
-* ...
+* [**Frontend**](./razor-app/): Vue.js, Netlify
+* [**Backend**](./src/): PHP, Node.js *(for migration in Razor V2.0.0)*
+* [**Database**](./src/): SQL, PostgreSQL
+
+## Hosting 
+
+... Remove this section or combine with above later
+
+* Netlify
+* Bluehost, SiteGround, A2 Hosting
+* Amazon RDS, Google Cloud SQL, 
 
 ## Usage
 
-...
 
 ```console
 ...
@@ -25,10 +29,31 @@ Made to practise the stack for my internship.
 
 ## Architecture
 
-... Or consider adding the diagramsascode thing here
+### Overview
+
+![](./asset/reference/architecture.png)
+
+### DB
 
 ```mermaid
-...
+erDiagram
+    USERS {
+        int id PK "Auto Increment"
+        varchar(255) username "NOT NULL, UNIQUE"
+        varchar(255) password_hash "NOT NULL"
+        timestamp created_at "DEFAULT CURRENT_TIMESTAMP"
+    }
+    
+    PASSWORDS {
+        int id PK "Auto Increment"
+        int user_id FK "NOT NULL"
+        varchar(255) website "NOT NULL"
+        varchar(255) username "NOT NULL"
+        varchar(255) encrypted_password "NOT NULL"
+        timestamp created_at "DEFAULT CURRENT_TIMESTAMP"
+    }
+    
+    USERS ||--o{ PASSWORDS : "stores"
 ```
 
 ## Reference
