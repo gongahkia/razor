@@ -10,13 +10,13 @@ Made to practise [the stack](#stack) for my internship.
 
 `Razor` V1.0.0
 
-* [**Frontend**](./razor-app/): Vue.js, Netlify
+* [**Frontend**](./razor-app-v1/): Vue.js, Netlify
 * [**Backend**](./src/): PHP, AWS EC2
 * [**Database**](./src/): SQL, PostgreSQL
 
 `Razor` V2.0.0
 
-* [**Frontend**](./razor-app/): Vue.js, Netlify
+* [**Frontend**](./razor-app-v2/): Vue.js, Netlify
 * [**Backend**](./src/): Node.js, DigitalOcean Droplets
 * [**Database**](./src/): Firebase Realtime Database
 
