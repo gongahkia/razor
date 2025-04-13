@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/razor_1.0.0-passing-green)](https://github.com/gongahkia/razor/releases/tag/1.0.0) 
 
-# `Razor`
+# `Razor` 🏐
 
 Tiny password manager.
 
@@ -8,24 +8,39 @@ Made to practise [the stack](#stack) for my internship.
 
 ## Stack
 
+`Razor` V1.0.0
+
 * [**Frontend**](./razor-app/): Vue.js, Netlify
-* [**Backend**](./src/): PHP, Node.js *(for migration in Razor V2.0.0)*
+* [**Backend**](./src/): PHP, AWS EC2
 * [**Database**](./src/): SQL, PostgreSQL
+
+`Razor` V2.0.0
+
+* [**Frontend**](./razor-app/): Vue.js, Netlify
+* [**Backend**](./src/): Node.js, DigitalOcean Droplets
+* [**Database**](./src/): Firebase Realtime Database
 
 ## Usage
 
 
 ```console
-...
+$ git clone https://github.com/gongahkia/razor
+$ sudo service postgresql start
+$ psql -U postgres -c "CREATE DATABASE razordb;"
+$ psql -U postgres -d razor -f src/backend/db/schema.sql
+$ cd/razor-app
+$ npm run serve
 ```
 
 ## Architecture
 
-### Overview
+### `Razor` V1.0.0
+
+#### Overview
 
 ![](./asset/reference/architecture.png)
 
-### DB
+#### DB
 
 ```mermaid
 erDiagram
@@ -46,6 +61,16 @@ erDiagram
     }
     
     USERS ||--o{ PASSWORDS : "stores"
+```
+
+### `Razor` V2.0.0
+
+#### Overview
+
+#### DB
+
+```mermaid
+...
 ```
 
 ## Reference
