@@ -1,20 +1,21 @@
-[![](https://img.shields.io/badge/razor_1.0.0-passing-green)](https://github.com/gongahkia/razor/releases/tag/1.0.0) 
+[![](https://img.shields.io/badge/razor_1.0.0-passing-dark_green)](https://github.com/gongahkia/razor/releases/tag/1.0.0) 
+[![](https://img.shields.io/badge/razor_2.0.0-passing-green)](https://github.com/gongahkia/razor/releases/tag/2.0.0) 
 
 # `Razor` 🏐
 
 Simple Full Stack Password Manager Web App.
 
-Made to practise [the stack](#stack) for my internship. 
+Made to practise [the stack(s)](#stack) *(and migrating between them)* for my internship. 
 
 ## Stack
 
-`Razor` V1.0.0
+[`Razor` V1.0.0](#razor-v100)
 
 * [**Frontend**](./razor-app-v1/): Vue.js, Netlify
 * [**Backend**](./src/): PHP, AWS EC2
 * [**Database**](./src/): SQL, PostgreSQL
 
-`Razor` V2.0.0
+[`Razor` V2.0.0](#razor-v200)
 
 * [**Frontend**](./razor-app-v2/): Vue.js, Netlify
 * [**Backend**](./src/): Node.js, DigitalOcean Droplets
@@ -38,7 +39,7 @@ $ npm run serve
 
 #### Overview
 
-![](./asset/reference/architecture.png)
+![](./asset/reference/architecture-1.png)
 
 #### DB
 
@@ -67,10 +68,28 @@ erDiagram
 
 #### Overview
 
+![](./asset/reference/architecture-2.png)
+
 #### DB
 
 ```mermaid
-...
+erDiagram
+    USERS ||--o{ PASSWORDS : stores
+    USERS {
+        string uid PK "Firebase Auth UID"
+        string email "User's email"
+        timestamp createdAt "Account creation time"
+        timestamp lastLogin "Last login time"
+    }
+    PASSWORDS {
+        string id PK "Auto-generated key"
+        string user_id FK "References USERS.uid"
+        string website "Website URL"
+        string username "Account username"
+        string encrypted_password "AES encrypted password"
+        timestamp createdAt "Password creation time"
+        timestamp updatedAt "Last update time"
+    }
 ```
 
 ## Reference
