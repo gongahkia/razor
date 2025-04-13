@@ -32,10 +32,8 @@ export default {
   methods: {
     handleLogin() {
       this.loggedIn = true
-      // Fetch passwords from backend
     },
     addPassword(password) {
-      // Send password to backend
       this.passwords.push(password)
     }
   }

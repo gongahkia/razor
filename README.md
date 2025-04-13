@@ -12,14 +12,6 @@ Made to practise [the stack](#stack) for my internship.
 * [**Backend**](./src/): PHP, Node.js *(for migration in Razor V2.0.0)*
 * [**Database**](./src/): SQL, PostgreSQL
 
-## Hosting 
-
-... Remove this section or combine with above later
-
-* Netlify
-* Bluehost, SiteGround, A2 Hosting
-* Amazon RDS, Google Cloud SQL, 
-
 ## Usage
 
 
