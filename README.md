@@ -2,7 +2,7 @@
 
 # `Razor` 🏐
 
-Tiny password manager.
+Simple Full Stack Password Manager Web App.
 
 Made to practise [the stack](#stack) for my internship. 
 
