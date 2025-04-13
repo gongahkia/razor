@@ -26,6 +26,7 @@ export default {
 
       try {
         const response = await axios.post('http://localhost/src/backend/index.php', {
+          action: 'login',  
           username: this.username,
           password: this.password
         });
